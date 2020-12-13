@@ -14,7 +14,7 @@ The bot is fully operable via chat and the webinterface.
 To get started write `!help` to the bot.
 
 ## Download
-* Download the bot from [releases](https://github.com/ProZion24/zion.software-public/releases/)
+* Download the website from [releases](https://github.com/ProZion24/zion.software-public/releases/)
 
 ## Install
 
