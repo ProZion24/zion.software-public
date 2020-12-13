@@ -7,7 +7,7 @@ This is my website, known as zion.software
 
 ## Features
 * Website where everyone can see what you're listening to on Spotify
-* Full Spotify-API
+* Full [Spotify-API](https://github.com/jwilsson/spotify-web-api-php)
 
 ## Bot Commands
 The bot is fully operable via chat and the webinterface. 
