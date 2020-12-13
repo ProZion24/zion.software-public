@@ -38,7 +38,7 @@ $api = new SpotifyWebAPI\SpotifyWebAPI();
         if($i === $numItems) {
             $artistName .= $artist->name;
         } else {
-			$artistName .= $artist->name.", ";
+            $artistName .= $artist->name.", ";
         }
         $i++;
     }
