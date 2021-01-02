@@ -22,7 +22,8 @@ $api = new SpotifyWebAPI\SpotifyWebAPI();
     $artistName = "";
     $imagearray = $objects->item->album->images;
     $device = $objects->device->name;
-	$playbackURL = $objects->item->uri;
+    $playbackURL = $objects->item->uri;
+    $volume = $objects->device->volume_percent;
 
     $a = 0;
     foreach($imagearray as $images) {
@@ -66,20 +67,34 @@ $api = new SpotifyWebAPI\SpotifyWebAPI();
             <h2>developer, security researcher, gay.</h2>
             <?php 
             if(isset($title) && $title != null) {
+                switch ($volume) {
+                    case $volume <= 10:
+                        $feel = "hˆre nebenbei";
+                        break;
+                    case $volume <= 20:
+                        $feel = "schepper";
+                        break;
+                    case $volume <= 50:
+                        $feel = "fetze";
+                        break;
+                    case $volume <= 100:
+                        $feel = "f¸hle den Vibe von";
+                        break;                 
+                }
             ?>
-            <h3><a href='<?php echo $playbackURL ?>' style="color:#FFFFFF; text-decoration:none;">Ich h√∂re gerade: <?php echo $title." - ".$artistName.", auf: ".$device?></h3>
+            <h3><a href='<?php echo $playbackURL ?>' style="color:#FFFFFF; text-decoration:none;">Ich <?php print_r($feel); ?>: <?php echo $title." - ".$artistName.", auf: ".$device?></h3>
             <?php 
             }
             ?>
             <hr style="width: 50%; background-color: #91bae1; border-color: #91bae1;">
 
-            <a href="https://github.com/ProZion24" style="color: white;"><i class="fab fa-github" style="font-size: 2em;" alt="Github Profil √∂ffnen"></i></a>
+            <a href="https://github.com/ProZion24" style="color: white;"><i class="fab fa-github" style="font-size: 2em;" alt="Github Profil ˆffnen"></i></a>
             &nbsp
-            <a href="https://instagram.com/ProZion24/" style="color: white;"><i class="fab fa-instagram" style="font-size: 2em;" alt="Instagram Profil √∂ffnen"></i></a>
+            <a href="https://instagram.com/ProZion24/" style="color: white;"><i class="fab fa-instagram" style="font-size: 2em;" alt="Instagram Profil ˆffnen"></i></a>
             &nbsp
-            <a href="https://twitter.com/ProZion24/" style="color: white;"><i class="fab fa-twitter" style="font-size: 2em;" alt="Twitter Profil √∂ffnen"></i></a>
+            <a href="https://twitter.com/ProZion24/" style="color: white;"><i class="fab fa-twitter" style="font-size: 2em;" alt="Twitter Profil ˆffnen"></i></a>
             &nbsp
-            <a href="https://cloud.zion.software/" style="color: white;"><i class="fa fa-cloud" style="font-size: 2em;" alt="Twitter Profil √∂ffnen"></i></a>&nbsp
+            <a href="https://cloud.zion.software/" style="color: white;"><i class="fa fa-cloud" style="font-size: 2em;" alt="Twitter Profil ˆffnen"></i></a>&nbsp
         </div>
     </div>
 </body>
